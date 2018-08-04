@@ -33,7 +33,7 @@ PHI(n) = (p1 ^ k1 - p1 ^ (k1 - 1)) * (p2 ^ k2 - p2 ^ (k2 - 1)) * ... * (pn ^ kn 
 
 > PS：附上 0~100 欧拉函数表 ——by 百度百科
 
-![欧拉函数表](https://github.com/qinbin52qiul/MarkdownPhotos/tree/master/algorithms/euler_function.png)
+![欧拉函数表](https://github.com/qinbin52qiul/MarkdownPhotos/blob/master/algorithms/euler_function.png?raw=true)
 
 参考文章链接
 
