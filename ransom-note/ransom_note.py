@@ -1,3 +1,10 @@
+'''
+126 / 126 个通过测试用例
+状态：通过
+执行用时：56 ms
+'''
+
+
 class Solution:
     def canConstruct(self, ransomNote, magazine):
         """
@@ -7,8 +14,10 @@ class Solution:
         """
         ran = len(ransomNote)
         mag = len(magazine)
-        if ran > mag or ran == 0:
+        if ran > mag:
             return False
+        if ran == 0:
+            return True
         for each in list(set(ransomNote)):
             if ransomNote.count(each) > magazine.count(each):
                 return False
@@ -16,3 +25,4 @@ class Solution:
 
 
 print(Solution().canConstruct('aa', 'ab'))
+print(Solution().canConstruct('aa', 'abba'))
