@@ -39,9 +39,21 @@ class Solution:
                 match = re.match(prefix, strs[i])
         return prefix
 
+    # 执行用时：60 ms
+    def longestCommonPrefix3(self, strs):
+        if not strs:
+            return ''
+        for i in range(len(strs[0])):
+            for string in strs[1:]:
+                if i >= len(string) or string[i] != strs[0][i]:
+                    return strs[0][:i]
+        return strs[0]
+
 
 if __name__ == '__main__':
     str1 = ["flower", "flow", "flight"]
-    print(Solution().longestCommonPrefix2(str1))  # "fl"
+    # print(Solution().longestCommonPrefix3(str1))  # "fl"
     str2 = ["dog", "racecar", "car"]
-    print(Solution().longestCommonPrefix2(str2))  # ""
+    # print(Solution().longestCommonPrefix3(str2))  # ""
+    str3 = ["aa", "a"]
+    print(Solution().longestCommonPrefix3(str3))  # "a"
