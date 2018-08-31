@@ -71,6 +71,8 @@ class Solution:
     # 递归：执行用时：52 ms
     def letterCombinations4(self, digits):
         # 数字字符串为空时
+        if not digits:
+            return []
         res = []
         dict_str = {
             '2': 'abc',
@@ -82,8 +84,6 @@ class Solution:
             '8': 'tuv',
             '9': 'wxyz'
         }
-        if not digits:
-            return []
         # 递归出口，当递归到最后一个数的时候res拿到结果进行for循环遍历
         if len(digits) == 1:
             return list(dict_str[digits[0]])
@@ -95,7 +95,26 @@ class Solution:
                 res.append(j + i)
         return res
 
+    # 巧用列表推导式：执行用时：44 ms
+    def letterCombinations5(self, digits):
+        if not digits:
+            return []
+        dict_str = {
+            '2': 'abc',
+            '3': 'def',
+            '4': 'ghi',
+            '5': 'jkl',
+            '6': 'mno',
+            '7': 'pqrs',
+            '8': 'tuv',
+            '9': 'wxyz'
+        }
+        res = [i for i in dict_str[digits[0]]]
+        for i in digits[1:]:
+            res = [m + n for m in res for n in dict_str[i]]
+        return res
+
 
 if __name__ == '__main__':
     # ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
-    print(Solution().letterCombinations4("23"))
+    print(Solution().letterCombinations5("23"))
