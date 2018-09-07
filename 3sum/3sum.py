@@ -46,10 +46,7 @@ class Solution:
                         start += 1
         return res
 
-    def threeSum3(self, nums):
-        
-
 
 if __name__ == '__main__':
     nums = [-1, 0, 1, 2, -1, -4]
-    print(Solution().threeSum3(nums))
+    print(Solution().threeSum2(nums))
