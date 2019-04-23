@@ -17,5 +17,10 @@ var rotateString2 = function(A, B) {
     return A.length === B.length && ~(A + A).indexOf(B);
 };
 
+var rotateString3 = function(A, B) {
+    if(A.length !== B.length) return false;
+    return (B + B).includes(A)
+};
+
 console.log(rotateString('abcde', 'cdeab')); // true
 console.log(rotateString('abcde', 'abced')); // false
