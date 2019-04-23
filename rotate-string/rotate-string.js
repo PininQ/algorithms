@@ -12,5 +12,10 @@ var rotateString = function (A, B) {
     return false;
 };
 
+var rotateString2 = function(A, B) {
+    /* 相通 */
+    return A.length === B.length && ~(A + A).indexOf(B);
+};
+
 console.log(rotateString('abcde', 'cdeab')); // true
 console.log(rotateString('abcde', 'abced')); // false
