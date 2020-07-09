@@ -1,4 +1,4 @@
-import { canPlaceFlowers, canPlaceFlowers2 } from '../../code/array/605.种花问题'
+import { canPlaceFlowers, canPlaceFlowers2, canPlaceFlowers3 } from '../../code/array/605.种花问题'
 
 test('canPlaceFlowers', () => {
   expect(canPlaceFlowers([1,0,0,0,1], 1)).toBe(true)
