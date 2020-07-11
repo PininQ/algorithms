@@ -14,6 +14,7 @@ var grayCode = function (n) {
 };
 
 var grayCode2 = function (n) {
+  if (n === 0) return [0]
   // 递归函数，用来算输入为n的格雷编码序列
   let make = (n) => {
     if (n === 1) {
@@ -29,7 +30,7 @@ var grayCode2 = function (n) {
       return result
     }
   }
-  return make(n)
+  return make(n).map(i => parseInt(i, 2))
 };
 
 export {
